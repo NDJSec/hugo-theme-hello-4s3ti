@@ -11,6 +11,28 @@
         <div>
             <h1>{{ .Site.Params.homeTitle }}</h1>
             {{ partial "subtitle.html" . }}
+
+            <!-- List Stats for Tribe Cyber -->
+            <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 40px; margin: 20px 0;">
+                <div style="display: flex; flex-direction: column; align-items: center; margin: 20px 0;">
+                    <img src="{{ .Site.Params.logo1 }}" alt="Logo 1" style="max-width: 150px; height: auto;">
+                    <h3 style="margin-top: 10px;">NCL Power Rankings</h3>
+                    <p style="margin-top: 10px; text-align: center;">Ranked 81st out of all Colleges nationally <br>
+                        and 14th in the experienced category. <br> (Spring 2024)</p>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; margin: 20px 0;">
+                    <img src="{{ .Site.Params.logo2 }}" alt="Logo 2" style="max-width: 150px; height: auto;">
+                    <h3 style="margin-top: 10px; text-align: center;">Learn Real World Skills</h3>
+                    <p style="margin-top: 10px; text-align: center;">Linux, digital forensics, <br> traffic analysis, <br>and more."</p>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; margin: 20px 0;">
+                    <img src="{{ .Site.Params.logo3 }}" alt="Logo 3" style="max-width: 150px; height: auto;">
+                    <h3 style="margin-top: 10px; text-align: center;">Networking</h3>
+                    <p style="margin-top: 10px; text-align: center;">Meet like minded people <br> in the field of cyber security, <br> while having fun.</p>
+                </div>
+            </div>
+        
+        
         <!-- Start Posts -->
         {{ if .Site.Params.showPosts }}
             {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
